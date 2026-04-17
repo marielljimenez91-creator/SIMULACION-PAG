@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Exposición de Simulación</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg,#eafaf1,#d6eaf8); /* gradiente verde-azul */
+      color: #333;
+      display: flex;
+    }
+    nav {
+      width: 240px;
+      background: #1b4d3e; /* verde oscuro */
+      color: #fff;
+      min-height: 100vh;
+      padding-top: 30px;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+    }
+    nav h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #a8e6cf;
+    }
+    nav button {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #3498db;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav button:hover {
+      background: #2ecc71;
+      transform: scale(1.05);
+    }
+    main {
+      flex: 1;
+      padding: 30px;
+    }
+    header {
+      background: #2471a3;
+      color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    section {
+      display: none;
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #1b4d3e;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 8px;
+    }
+    h3 {
+      margin-top: 20px;
+      color: #2ecc71;
+    }
+    .pregunta {
+      cursor: pointer;
+      margin: 15px 0;
+      padding: 15px;
+      background: #d1f2eb;
+      border-radius: 8px;
+    }
+    .respuesta {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background: #a9dfbf;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>Menú</h2>
+    <button onclick="mostrar('presentacion')">Presentación</button>
+    <button onclick="mostrar('unidad1')">Unidad 1</button>
+    <button onclick="mostrar('unidad2')">Unidad 2</button>
+    <button onclick="mostrar('preguntas')">Preguntas</button>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Exposición de Temas - Simulación</h1>
+      <p>Unidad 1 y Unidad 2</p>
+    </header>
+
+    <section id="presentacion" class="active">
+      <h2>Hoja de Presentación</h2>
+      <p><strong>Materia:</strong> Simulación</p>
+      <p><strong>Alumno:</strong> Mariell Rockselly Flores Jimenéz</p>
+      <p><strong> Nombre Profesor:</strong> IVAN OLAN GARCIA</p>
+      <p><strong>Fecha:</strong> Abril 2026</p>
+    </section>
+
+    <section id="unidad1">
+      <h2>Unidad 1: Introducción a la Simulación</h2>
+      <h3>1.1 Definición e importancia</h3>
+      <p>La simulación es una técnica que permite representar sistemas reales mediante modelos computacionales. 
+      Es importante porque ayuda a analizar procesos sin necesidad de experimentar directamente en la realidad, 
+      evitando riesgos y costos elevados.</p>
+
+      <h3>1.2 Conceptos básicos</h3>
+      <p>Incluye entidades (objetos que participan en el sistema), variables de estado (condiciones que cambian en el tiempo), 
+      parámetros (valores fijos que caracterizan el sistema) y eventos (sucesos que modifican el estado).</p>
+
+      <h3>1.3 Metodología</h3>
+      <p>La metodología de simulación abarca: definición del problema, construcción del modelo conceptual, 
+      implementación computacional, verificación, validación y análisis de resultados.</p>
+
+      <h3>1.4 Estructura y etapas</h3>
+      <p>Un estudio de simulación sigue etapas como: formulación del problema, recolección de datos, 
+      diseño del modelo, ejecución de simulaciones y documentación.</p>
+
+      <h3>1.5 Etapas de un proyecto</h3>
+      <p>Definición de objetivos, modelado, verificación, validación, experimentación y comunicación de resultados.</p>
+
+      <h3>1.6 Elementos básicos</h3>
+      <p>Un simulador de eventos discretos incluye: reloj de simulación, lista de eventos futuros, entidades, colas y recursos.</p>
+
+      <h3>1.7 Ventajas y desventajas</h3>
+      <p>Ventajas: permite experimentar sin riesgos, analizar escenarios hipotéticos y reducir costos. 
+      Desventajas: requiere tiempo, recursos y puede ser complejo de validar.</p>
+    </section>
+
+    <section id="unidad2">
+      <h2>Unidad 2: Números Pseudoaleatorios</h2>
+      <h3>2.1 Métodos de generación</h3>
+      <p>Los números pseudoaleatorios se generan mediante algoritmos como el método congruencial lineal, 
+      el método de los cuadrados medios y el Mersenne Twister. Aunque no son verdaderamente aleatorios, 
+      cumplen propiedades estadísticas útiles para simulación.</p>
+
+      <h3>2.2 Pruebas estadísticas</h3>
+      <p>Se aplican pruebas de uniformidad (Kolmogorov-Smirnov), aleatoriedad (prueba de corridas) e independencia 
+      para validar la calidad de los números generados.</p>
+
+      <h3>2.3 Método de Monte Carlo</h3>
+      <p>Es una técnica que utiliza números aleatorios para resolver problemas matemáticos y de ingeniería. 
+      Sus aplicaciones incluyen integración numérica, optimización y análisis de riesgo.</p>
+
+      <h3>2.3.1 Aplicaciones en integración numérica</h3>
+      <p>Permite calcular integrales complejas mediante la generación de números aleatorios, logrando aproximaciones 
+      eficientes en problemas multidimensionales.</p>
+
+      <h3>2.3.2 Aplicaciones en optimización</h3>
+      <p>Se utiliza para encontrar soluciones aproximadas en problemas de optimización, explorando múltiples escenarios 
+      y evaluando resultados con base en simulaciones aleatorias.</p>
+
+      <h3>2.3.3 Aplicaciones en análisis de riesgo</h3>
+      <p>Es ampliamente usado en finanzas e ingeniería para modelar incertidumbre, evaluar riesgos y estimar 
+      probabilidades de eventos críticos.</p>
+    </section>
+
+    <section id="preguntas">
+      <h2>Preguntas y Respuestas</h2>
+      <div class="pregunta" onclick="toggleRespuesta(this)">¿Qué es la simulación?
+        <div class="respuesta">Es la representación de un sistema real mediante un modelo computacional para analizar su comportamiento.</div>
+      </div>
+      <div class="pregunta" onclick="toggleRespuesta(this)">¿Qué ventajas tiene la simulación?
+        <div class="respuesta">Permite experimentar sin riesgos, probar escenarios hipotéticos y mejorar la eficiencia de sistemas.</div>
+      </div>
+      <div class="pregunta" onclick="toggleRespuesta(this)">¿Qué es el método de Monte Carlo?
+        <div class="respuesta">Es una técnica que usa números aleatorios para resolver problemas complejos en ingeniería y matemáticas.</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function mostrar(id){
+      document.querySelectorAll('section').forEach(sec=>sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    function toggleRespuesta(element){
+      const r=element.querySelector('.respuesta');
+      r.style.display=r.style.display==='block'?'none':'block';
+    }
+  </script>
+</body>
+</html>
